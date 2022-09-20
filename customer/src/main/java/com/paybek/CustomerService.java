@@ -3,7 +3,7 @@ package com.paybek;
 import org.springframework.stereotype.Service;
 
 @Service
-public record CustomerService() {
+public record CustomerService(CustomerRepository customerRepository) {
     public void registerCustomer(CustomerRegistrationRequest request) {
         Customer customer = Customer.builder()
                 .firstName(request.firstName())
@@ -13,6 +13,7 @@ public record CustomerService() {
         // TODO: 9/20/2022 check if email valid
         // TODO: 9/20/2022 check if email not taken
         // TODO: 9/20/2022 store customer in db
+        customerRepository.save(customer);
 
     }
 }
