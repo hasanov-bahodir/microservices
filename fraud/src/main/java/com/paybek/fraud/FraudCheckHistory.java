@@ -16,11 +16,11 @@ import java.time.LocalDateTime;
 @Entity
 public class FraudCheckHistory {
     @Id
-    @SequenceGenerator(name = "customer_id_sequence",
-            sequenceName = "customer_id_sequence"
+    @SequenceGenerator(name = "fraud_id_sequence",
+            sequenceName = "fraud_id_sequence"
     )
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator = "customer_id_sequence"
+            generator = "fraud_id_sequence"
     )
     private Integer id;
     private Integer customerId;
