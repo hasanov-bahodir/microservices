@@ -1,0 +1,35 @@
+package com.paybek.customer;
+
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+@Service
+@AllArgsConstructor
+public class CustomerService {
+    private final CustomerRepository customerRepository;
+    private final RestTemplate restTemplate;
+
+    public void registerCustomer(CustomerRegistrationRequest request) {
+        Customer customer = Customer.builder()
+                .firstName(request.firstName())
+                .lastName(request.lastName())
+                .email(request.email())
+                .build();
+        // TODO: 9/20/2022 check if email valid
+        // TODO: 9/20/2022 check if email not taken
+        customerRepository.saveAndFlush(customer);
+        // TODO: 9/22/2022 check is customer fraudster?
+        FraudCheckResponse fraudCheckResponse = restTemplate.getForObject(
+                "http://localhost:8081/api/v1/fraud-check/{customerId}",
+                FraudCheckResponse.class,
+                customer.getId()
+        );
+        if (fraudCheckResponse.isFraudster()) {
+            throw new IllegalStateException("fraudster");
+        }
+
+        // TODO: 9/22/2022 send notification?
+
+    }
+}

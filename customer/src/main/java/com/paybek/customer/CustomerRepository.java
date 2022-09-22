@@ -1,4 +1,4 @@
-package com.paybek;
+package com.paybek.customer;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

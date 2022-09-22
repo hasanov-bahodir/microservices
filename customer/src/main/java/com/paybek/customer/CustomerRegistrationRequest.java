@@ -1,4 +1,4 @@
-package com.paybek;
+package com.paybek.customer;
 
 public record CustomerRegistrationRequest(String firstName,
                                           String lastName,

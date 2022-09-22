@@ -1,19 +1,20 @@
-package com.paybek;
-// Bahodir Hasanov 9/20/2022 12:28 PM
+package com.paybek.fraud;
 
+import jdk.jfr.Enabled;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Builder
-@Entity()
-public class Customer {
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+public class FraudCheckHistory {
     @Id
     @SequenceGenerator(name = "customer_id_sequence",
             sequenceName = "customer_id_sequence"
@@ -22,7 +23,8 @@ public class Customer {
             generator = "customer_id_sequence"
     )
     private Integer id;
-    private String firstName;
-    private String lastName;
-    private String email;
+    private Integer customerId;
+    private Boolean isFraudster;
+    private LocalDateTime createdAt;
 }
+// Bahodir Hasanov 9/22/2022 11:31 AM
