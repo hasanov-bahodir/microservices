@@ -1,4 +1,4 @@
-package uz.paybek;
+package uz.paybek.notification;
 
 import lombok.*;
 
