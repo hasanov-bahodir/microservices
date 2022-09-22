@@ -21,7 +21,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <spring.boot.maven.plugin.version>2.7.2</spring.boot.maven.plugin.version>
         <spring.boot.dependecies.version>2.7.2</spring.boot.dependecies.version>
-        <spring.clound-version>2020.0.3</spring.clound-version>
+        <spring.cloud-version>2021.0.3</spring.cloud-version>
     </properties>
     <dependencyManagement>
         <dependencies>
