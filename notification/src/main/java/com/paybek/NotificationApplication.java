@@ -3,13 +3,12 @@ package com.paybek;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
+// Bahodir Hasanov 9/22/2022 6:30 PM
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients(basePackages = {"com.paybek.fraud","com.paybek.notification"})
-public class CustomerApplication {
+public class NotificationApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CustomerApplication.class,args);
+        SpringApplication.run(NotificationApplication.class, args);
     }
 }
