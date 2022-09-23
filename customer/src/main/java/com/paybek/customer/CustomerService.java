@@ -37,7 +37,7 @@ public class CustomerService {
         notificationClient.sendNotification(new NotificationRequest(
                 customer.getId(),
                 customer.getEmail(),
-                String.format("Hi %s, welcome to Paybek", customer.getFirstName())
+                String.format("Hi %s, welcome to Paybek!", customer.getFirstName())
         ));
 
     }

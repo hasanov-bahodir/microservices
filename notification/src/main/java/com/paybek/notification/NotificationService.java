@@ -1,6 +1,5 @@
-package uz.paybek.notification;
+package com.paybek.notification;
 
-import com.paybek.notification.NotificationRequest;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package uz.paybek.notification;
+package com.paybek.notification;
 
 import lombok.*;
 
@@ -15,11 +15,11 @@ import java.time.LocalDateTime;
 @Entity
 public class Notification {
     @Id
-    @SequenceGenerator(name = "fraud_id_sequence",
-            sequenceName = "fraud_id_sequence"
+    @SequenceGenerator(name = "notification_id_sequence",
+            sequenceName = "notification_id_sequence"
     )
     @GeneratedValue(strategy = GenerationType.SEQUENCE,
-            generator = "fraud_id_sequence"
+            generator = "notification_id_sequence"
     )
     private Integer notificationId;
     private Integer toCostumerId;
