@@ -1,0 +1,9 @@
+com\paybek\notification\Notification$NotificationBuilder.class
+com\paybek\notification\NotificationRepository.class
+com\paybek\notification\NotificationService.class
+com\paybek\NotificationApplication.class
+com\paybek\notification\rabbitmq\NotificationConsumer.class
+com\paybek\notification\NotificationConfig.class
+com\paybek\NotificationApplication$Person.class
+com\paybek\notification\NotificationController.class
+com\paybek\notification\Notification.class
