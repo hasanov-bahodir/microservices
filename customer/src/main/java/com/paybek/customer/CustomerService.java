@@ -1,5 +1,6 @@
 package com.paybek.customer;
 
+import com.paybek.amqp.RabbitMQMessageProducer;
 import com.paybek.fraud.FraudCheckResponse;
 import com.paybek.fraud.FraudClient;
 import com.paybek.notification.NotificationClient;
@@ -17,6 +18,7 @@ public class CustomerService {
     private final RestTemplate restTemplate;
     private final FraudClient fraudClient;
     private final NotificationClient notificationClient;
+    private final RabbitMQMessageProducer rabbitMQMessageProducer;
 
     public void registerCustomer(CustomerRegistrationRequest request) {
         Customer customer = Customer.builder()
@@ -34,11 +36,18 @@ public class CustomerService {
         }
 
         // TODO: 9/22/2022 make it async i.e add to queue?
-        notificationClient.sendNotification(new NotificationRequest(
+        NotificationRequest notificationRequest = new NotificationRequest(
                 customer.getId(),
                 customer.getEmail(),
                 String.format("Hi %s, welcome to Paybek!", customer.getFirstName())
-        ));
+        );
+
+
+        rabbitMQMessageProducer.publish(
+                notificationRequest,
+                "internal.exchange",
+                "internal.notification.routing-key"
+        );
 
     }
 }
