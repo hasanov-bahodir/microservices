@@ -7,6 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication(
         scanBasePackages = {
+                "com.paybek.customer",
                 "com.paybek.amqp"
         }
 )

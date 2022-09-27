@@ -1,0 +1,4 @@
+com\paybek\fraud\FraudCheckResponse.class
+com\paybek\fraud\FraudClient.class
+com\paybek\notification\NotificationRequest.class
+com\paybek\notification\NotificationClient.class
