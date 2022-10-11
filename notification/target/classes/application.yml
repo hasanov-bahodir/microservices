@@ -5,7 +5,7 @@ spring:
     name: notification
   datasource:
     password: root123
-    url: jdbc:postgresql://localhost:5432/fraud
+    url: jdbc:postgresql://localhost:5432/notification
     username: postgres
   jpa:
     hibernate:
