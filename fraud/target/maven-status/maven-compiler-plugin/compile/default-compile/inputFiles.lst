@@ -1,5 +1,5 @@
-D:\paybekservices\fraud\src\main\java\com\paybek\FraudApplication.java
-D:\paybekservices\fraud\src\main\java\com\paybek\fraud\FraudCheckService.java
-D:\paybekservices\fraud\src\main\java\com\paybek\fraud\FraudController.java
-D:\paybekservices\fraud\src\main\java\com\paybek\fraud\FraudCheckHistory.java
-D:\paybekservices\fraud\src\main\java\com\paybek\fraud\FraudCheckHistoryRepository.java
+D:\paybek\microservices\fraud\src\main\java\com\paybek\FraudApplication.java
+D:\paybek\microservices\fraud\src\main\java\com\paybek\fraud\FraudCheckHistory.java
+D:\paybek\microservices\fraud\src\main\java\com\paybek\fraud\FraudController.java
+D:\paybek\microservices\fraud\src\main\java\com\paybek\fraud\FraudCheckHistoryRepository.java
+D:\paybek\microservices\fraud\src\main\java\com\paybek\fraud\FraudCheckService.java
