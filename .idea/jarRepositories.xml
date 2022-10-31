@@ -7,6 +7,11 @@
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="codeartifact" />
+      <option name="name" value="codeartifact" />
+      <option name="url" value="https://paybek-spring-base-parent-pom-220109824359.d.codeartifact.us-east-1.amazonaws.com/maven/maven-central-store/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Maven Central repository" />
       <option name="url" value="https://repo1.maven.org/maven2" />
