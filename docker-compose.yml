@@ -164,4 +164,3 @@ volumes:
   pgadmin:
   elasticsearch_data:
     driver: local
-
