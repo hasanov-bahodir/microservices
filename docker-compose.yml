@@ -53,8 +53,8 @@ services:
       - SPRING_PROFILES_ACTIVE=docker
     networks:
       - spring
-  #    depends_on:
-  #      - zipkin
+    depends_on:
+      - zipkin
 
   apigw:
     image: bahodirhasanov7/apigw:latest
