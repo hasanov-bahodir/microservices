@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Bean;
         "com.paybek.notification",
         "com.paybek.amqp"
 })
-public class NotificationApplication {
+public class  NotificationApplication {
     public static void main(String[] args) {
         SpringApplication.run(NotificationApplication.class, args);
     }
